@@ -5,6 +5,8 @@ const chromium = require('chrome-aws-lambda');
 let autocodePuppeteer = chromium.puppeteer;
 let puppeteerLaunch = chromium.puppeteer.launch.bind(autocodePuppeteer);
 
+// allow passing of font-render-hinting flags to address Puppeteer text rendering issues
+// https://github.com/puppeteer/puppeteer/issues/2410
 const allowedArgs = ['--font-render-hinting=none', '--font-render-hinting=medium']
 
 autocodePuppeteer.launch = async (options) => {

@@ -4,7 +4,9 @@ Allows use of [Puppeteer](https://pptr.dev/) in [Autocode](https://autocode.com)
 
 # Usage
 
-Certain arguments to `puppeteer.launch` are restricted. The package will throw an error if you attempt to pass `args`, `executablePath`, or `headless` as an option into the `launch` method.
+Certain arguments to `puppeteer.launch` are restricted. The package will throw an error if you attempt to pass `executablePath` or `headless` as an option into the `launch` method.
+
+For custom `args`, only `--font-render-hinting=none` and `--font-render-hinting=medium` are allowed (to allow library users to address [Puppeteer text rendering issues](https://github.com/puppeteer/puppeteer/issues/2410)). Any other `args` will throw an error.
 
 ```
 const puppeteer = require('autocode-puppeteer');
