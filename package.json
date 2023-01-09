@@ -1,12 +1,12 @@
 {
-  "name": "autocode-puppeteer",
+  "name": "autocode-puppeteer-conarro",
   "version": "2.0.1",
   "description": "Puppeteer for use in Autocode services",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jacob Lee",
+  "author": "Jacob Lee & Kyle Conarro",
   "license": "MIT",
   "dependencies": {
     "chrome-aws-lambda": "5.5.0",
@@ -14,6 +14,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacoblee93/autocode-puppeteer"
+    "url": "https://github.com/conarro/autocode-puppeteer-conarro"
   }
 }
